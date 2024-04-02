@@ -1,0 +1,17 @@
+nav {
+    grid-area: n;
+    padding: 0 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.item {
+    color: aliceblue;
+}
+
+.item a:active,
+.item a:focus {
+    color: red;
+}

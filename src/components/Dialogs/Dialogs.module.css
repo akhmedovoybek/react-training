@@ -1,0 +1,14 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 10px;
+}
+
+.active{
+    color: darkorchid;
+    font-weight: 700;
+}
+
+.dialog{
+    display: block;
+}
