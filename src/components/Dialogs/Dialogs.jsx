@@ -17,15 +17,13 @@ const Message = (props)=>{
 
 const Dialogs = (props) => {
 
-  let messages=props.messages;
+  let messages=props.state.messages;
   let messagesElements = messages.map((m) => { return <Message message={m.message}/>})  
 
-  let dialogs = props.dialogs;
+  let dialogs = props.state.dialogs;
   let dialogsElements = dialogs.map((d) =>{return  <DialogItem name={d.name} id={d.id}/>})
   return (
     <div className="drop-shadow-2xl shadow-lg rounded-xl p-9 min-h-screen border-solid border border-gray-500">
-      {props.messages}
-      {props.dialogs}
       <div className={c.dialogs}>
         <div className={c.dialogsItems}>
           {dialogsElements}

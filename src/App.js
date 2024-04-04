@@ -11,10 +11,6 @@ import {
   Link
 } from "react-router-dom";
 const App = (props)=>{
-  let posts = [
-    {id:1,message:'Hi, how are you?', likescount:23},
-    {id:2, message:'It\'s my first post!', likescount:12}
-  ]
   return(
     <div className="app-wrapper w-full p-10">
       <Header />
@@ -22,8 +18,8 @@ const App = (props)=>{
       {/* <Profile /> */}
       <div className='app-wrapper-content '>
         <Routes>
-          <Route path="/profile" element={<Profile posts = {props.appState.posts}/>}/>
-          <Route path="/dialogs/*" element={<Dialogs messages={props.appState.messages} dialogs={props.appState.dialogs}/>}/>
+          <Route path="/profile" element={<Profile state = {props.state.profilePage}/>}/>
+          <Route path="/dialogs/*" element={<Dialogs state={props.state.dialogsPage} />}/>
         </Routes>
       </div>
     </div>
