@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state from './redux/state.js'
+import state, { addPost } from './redux/state.js'
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,10 +11,11 @@ import {
   Link
 } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let appState = state
+let appState = state;
+addPost("Hello Oybek!")
 root.render(
   <Router>
-    <App state={appState}/>
+    <App state={appState} addPost={addPost}/>
   </Router>
 );
 

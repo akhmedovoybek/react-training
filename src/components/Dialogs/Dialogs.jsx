@@ -32,6 +32,8 @@ const Dialogs = (props) => {
           {messagesElements}
         </div>
       </div>
+      <textarea className="resize-y border rounded-md p-4 w-96 block mb-4 h-32 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        <button  className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 mb-3">Send Message</button>
     </div>
   );
 };
