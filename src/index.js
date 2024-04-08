@@ -10,14 +10,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { renderEntireTree } from './render.js';
 let appState = state;
-addPost("Hello Oybek!")
-root.render(
-  <Router>
-    <App state={appState} addPost={addPost}/>
-  </Router>
-);
+renderEntireTree();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

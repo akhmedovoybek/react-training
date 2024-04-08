@@ -11,6 +11,7 @@ import {
   Link
 } from "react-router-dom";
 const App = (props)=>{
+  debugger;
   return(
     <div className="app-wrapper w-full p-10">
       <Header />
