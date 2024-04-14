@@ -10,13 +10,16 @@ const MyPosts = (props) => {
   });
   let newPostElement = React.createRef();
   let addPost = ()=>{
-    props.addPost(newPostElement.current.value)
+    props.addPost();
+  }
+  let onPostChange = ()=>{
+    props.updateNewPostText(newPostElement.current.value);
   }
   return (
     <div>
       My posts
       <div>
-        <textarea ref={newPostElement} className="resize-y border rounded-md p-4 w-96 block mb-4 h-32 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        <textarea ref={newPostElement} onChange={onPostChange} value={props.newPostText} className="resize-y border rounded-md p-4 w-96 block mb-4 h-32 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
         <button onClick={addPost} className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 mb-3">
           Add Post
         </button>

@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import App from "./App.js";
-import state, { addPost } from './redux/state.js'
+import state, { addPost, updateNewPostText } from './redux/state.js';
+const root = ReactDOM.createRoot(document.getElementById("root"));
 export let renderEntireTree = (state) => {
-  const root = ReactDOM.createRoot(document.getElementById("root"));
+  
   root.render(
     <Router>
-      <App state={state} addPost={addPost} />
+      <App state={state} addPost={addPost} updateNewPostText={updateNewPostText} />
     </Router>
   );
 };

@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 import { renderEntireTree } from './render.js';
 let appState = state;
-renderEntireTree();
+renderEntireTree(appState);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
